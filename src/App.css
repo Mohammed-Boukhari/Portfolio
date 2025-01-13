@@ -17,6 +17,12 @@
   --blue: #5dbcfc;
   --box-shadow: #2321214a;
   --error: #f44336;
+  --icon-hover: #5dbcfc;
+
+  --padding-rems-8-: -4.8rem;
+  --padding-rems-8: 4.8rem;
+  --padding-rems-7-: -1.7rem;
+  --padding-rems-7: 1.7rem;
 }
 
 /* ------------------------------------------
@@ -33,6 +39,7 @@ html {
     padding: 0;
     box-sizing: border-box;
   }
+  box-sizing: inherit;
 }
 
 button {
@@ -72,15 +79,43 @@ a {
 /* ------------------------------------------
   TODO: # Container
 -------------------------------------------*/
-
 .container {
   width: 80%;
   margin: 0 auto;
   background-color: var(--secondary);
   border: 2px solid var(--color-border);
+  padding: 0 var(--padding-rems-8);
 
   .divider {
     border-bottom: 1px solid var(--color-border);
     margin: 3rem 0;
+
+    width: calc(100% + var(--padding-rems-8) + var(--padding-rems-8));
+    margin-left: var(--padding-rems-8-);
+    margin-right: var(--padding-rems-8-);
+  }
+}
+
+/* FIXME: MAX-WIDTH > 1000px */
+
+@media (max-width: 1000px) {
+  .container {
+    width: 90%;
+    padding: 0 var(--padding-rems-7);
+
+    .divider {
+      width: calc(100% + var(--padding-rems-7) 0.8rem);
+      margin-left: var(--padding-rems-7-);
+      margin-right: var(--padding-rems-7-);
+    }
+  }
+}
+
+/* FIXME: MAX-WIDTH > 600px */
+
+@media (max-width: 600px) {
+  .container {
+    width: 98%;
+    padding: 0 1.5rem;
   }
 }

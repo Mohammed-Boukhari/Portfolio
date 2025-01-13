@@ -13,8 +13,6 @@ function App() {
       <Header />
       {/*== Header component ==*/}
 
-      <div className="divider" />
-
       {/* Hero component */}
       <Hero />
       {/*== Hero component ==*/}

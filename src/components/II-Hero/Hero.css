@@ -1,0 +1,66 @@
+/* ------------------------------------------
+  TODO: # Hero
+-------------------------------------------*/
+/* 
+ * -1 left-section
+ * -2 right-section => animation
+*/
+
+/* FIXME: 1 MIN-WIDTH > 700px */
+
+/* ------------------------------------------
+  FIXME: -1 left-section
+-------------------------------------------*/
+
+section.hero {
+  margin-top: 3rem;
+  .left-section {
+    flex-grow: 1;
+
+    .parent-avatar {
+      img.avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        box-shadow: 2px 2px 30px gray inset;
+        border: 1px solid darkorange;
+        padding: 2px;
+        margin-right: -4px;
+      }
+
+      .icon-verified {
+        color: var(--blue);
+        font-size: 1.3rem;
+        margin-bottom: 0.3rem;
+      }
+    }
+    h1.title {
+      font-size: 2.85rem;
+      line-height: 3.3rem;
+      margin: 24px 0;
+      color: var(--title);
+    }
+
+    p.sub-title {
+      color: var(--subtitle);
+      font-size: 0.9rem;
+      line-height: 1.65rem;
+      margin-bottom: 32px;
+    }
+
+    .icons-social-media.flex {
+      justify-content: flex-start !important;
+      font-size: 1.3rem;
+      gap: 1.5rem;
+      color: var(--subtitle);
+      .icon:hover {
+        color: var(--icon-hover);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/* ------------------------------------------
+  FIXME: -2 right-section => animation
+-------------------------------------------*/
