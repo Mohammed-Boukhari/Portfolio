@@ -1,0 +1,129 @@
+// FIXME: import { $bgheader, $title, $blue, $subtitle, $error, $secondary, $color-border, $box-shadow } from '../../var.scss';
+
+@import "../../style/var.scss";
+
+/* ------------------------------------------
+  TODO: # Main
+-------------------------------------------*/
+/// table of contents
+// 1. left Section
+// 2. right Section
+// 3. MAX-WIDTH > 600px
+
+/* ------------------------------------------
+  TODO: 1. left Section
+-------------------------------------------*/
+main.flex {
+  gap: 2.64rem;
+  align-items: start;
+
+  section.left-section {
+    flex-direction: column;
+    gap: 10px;
+
+    button {
+      background-color: rgba(36, 37, 46, 1);
+      width: 11rem;
+      padding: 0.75rem 0;
+      text-align: center;
+      font-size: 1.05rem;
+      text-transform: capitalize;
+      opacity: 0.5;
+      border-radius: 5px;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &.active {
+        opacity: 1;
+        font-weight: bold;
+        letter-spacing: 0.6px;
+        padding: 0.8rem 0;
+        border: 1px solid $blue;
+      }
+    }
+  }
+
+  // ----------------------------------------
+  // TODO: 2. right Section
+  // ----------------------------------------
+
+  section.right-section.flex {
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 2rem;
+
+    article.card {
+      border: 1px solid $border-card;
+      border-radius: 4px;
+      transition: all 0.3s;
+      background-image: $linear-gradient-cart;
+      &:hover {
+        border: 1px solid $blue;
+        transform: rotate(1deg);
+        scale: 1.01;
+        cursor: pointer;
+      }
+      .box {
+        color: $title;
+        padding: 5px;
+        h1.title {
+          margin: 0;
+        }
+        div.icons.flex {
+          justify-content: space-between !important;
+          div.flex .icon-link,
+          div.flex .icon-github {
+            font-size: 1.2rem;
+            color: $subtitle;
+            &:hover {
+              cursor: pointer;
+              color: $blue;
+            }
+          }
+          div.flex .icon-github {
+            font-size: 1.45rem;
+          }
+          a.link {
+            font-size: 0.9rem;
+            color: $blue;
+            margin-right: 12px;
+          }
+        }
+        .sub-title {
+          color: $subtitle;
+          font-size: 0.8rem;
+          margin: {
+            bottom: 1.1rem;
+            top: 0.7rem;
+          }
+        }
+      }
+      img {
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+/* FIXME: 3. MAX-WIDTH > 600px */
+
+@media (#{$media600px}) {
+  main.flex {
+    gap: 2.64rem;
+    flex-direction: column;
+    align-items: center;
+    section.left-section {
+      flex-direction: row;
+      gap: 10px;
+      flex-wrap: wrap;
+      button {
+        width: 7rem;
+        padding: 0.8rem 0;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

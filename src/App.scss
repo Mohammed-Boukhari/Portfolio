@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+/* FIXME: import to fonts from google font [ font || Robot || font weight ( 0 > 100 > 900 ) ] */
+
+@import "./style/var.scss";
+@import "./style/global.scss";
+@import "./style/scrollbar";
+@import "./style/scrollToTop";
+
+html {
+  body {
+    font-family: "Roboto", serif, sans-serif;
+    letter-spacing: 0.1px;
+    background: $prmary;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  box-sizing: inherit;
+}
+
+/* ------------------------------------------
+  TODO: # Container
+-------------------------------------------*/
+.container {
+  // width: 80%;
+  margin: 0 auto;
+  background-color: $secondary;
+  border: 2px solid $color-border;
+  padding: 0 $padding-rems-8;
+
+  .divider {
+    border-bottom: 1px solid $color-border;
+    margin: 3rem 0;
+
+    width: calc(100% + $padding-rems-8 + $padding-rems-8);
+    margin-left: $padding-rems-8-;
+    margin-right: $padding-rems-8-;
+  }
+}
+
+/* FIXME: MAX-WIDTH > 1000px */
+
+@media (#{$media1000px}) {
+  .container {
+    // width: 90%;
+    // padding: 0 $padding-rems-7;
+
+    .divider {
+      width: calc(100% + #{$padding-rems-7} + 0.8rem);
+      margin-left: $padding-rems-7-;
+      margin-right: $padding-rems-7-;
+    }
+  }
+}
+
+/* FIXME: MAX-WIDTH > 600px */
+
+// @media (#{$media600px}) {
+//   .container {
+//     width: 98%;
+//     padding: 0 1.5rem;
+//   }
+// }

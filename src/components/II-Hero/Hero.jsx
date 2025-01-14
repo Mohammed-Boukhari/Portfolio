@@ -1,4 +1,4 @@
-import "./Hero.css";
+import "./Hero.scss";
 
 const title = "software designer, founder, and amateut astronaut.";
 const supTitle = `I'm Mohammed a software designer and en trepreneur. based in New York City. I'm the founder and CEO of Planetaria, where we devlop technologies that empower regular people to explore space on their wen terms.`;
@@ -16,7 +16,7 @@ const Hero = () => {
           <span className="icon-verified"></span>
         </div>
 
-        <h1 className="title">{title}</h1>   
+        <h1 className="title">{title}</h1>
         <p className="sub-title">{supTitle}</p>
 
         <div className="icons-social-media flex">

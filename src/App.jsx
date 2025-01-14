@@ -4,11 +4,11 @@ import Main from "./components/III-Main/Main";
 import Contact from "./components/IV-Contact/Contact";
 import Footer from "./components/V-Footer/Footer";
 
-import "./App.css";
+import "./App.scss";
 
 function App() {
   return (
-    <div className="container">
+    <div id="up" className="container">
       {/* Header component */}
       <Header />
       {/*== Header component ==*/}
@@ -34,6 +34,12 @@ function App() {
       {/* Footer component */}
       <Footer />
       {/*== Footer component ==*/}
+
+      <a href="#up">
+        <button className="scrollToTop">
+          <i className="icon-keyboard_arrow_up"></i>
+        </button>
+      </a>
     </div>
   );
 }

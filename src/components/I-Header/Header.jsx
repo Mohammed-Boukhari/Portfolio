@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Header.css";
+import "./Header.scss";
 
 const Header = () => {
   const [showHaburgerMenu, setshowHaburgerMenu] = useState(false);

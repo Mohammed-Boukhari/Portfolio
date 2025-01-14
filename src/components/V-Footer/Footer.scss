@@ -1,0 +1,37 @@
+@import "../../style/_var.scss";
+
+/* ------------------------------------------
+  TODO: # Footer
+-------------------------------------------*/
+
+footer.flex {
+  justify-content: space-between;
+  padding-bottom: 1.9rem;
+  ul {
+    gap: 1rem;
+    a {
+      color: $subtitle;
+      font-size: 0.9rem;
+      font-weight: 400;
+      transition: all 0.3s;
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+  p.sup-title {
+    color: rgb(113, 113, 122);
+  }
+}
+
+@media ($media800px) {
+  footer.flex {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: start !important;
+    align-items: center;
+    ul {
+      margin-right: 31px;
+    }
+  }
+}
