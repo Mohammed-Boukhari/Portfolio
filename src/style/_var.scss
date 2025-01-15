@@ -2,25 +2,35 @@
   TODO: # variable
 -------------------------------------------*/
 
-/* FIXME: variable color css */
-$prmary: #000000;
-$secondary: #18181b;
-$color-border: #3f3f4666;
-$border-card: #5dbcfc4d;
-$linear-gradient-cart: linear-gradient(#0000000d, #ffffff1a);
-$subtitle: #a1a1aa;
-$title: #f4f4f5;
-$bgheader: #27272a;
-$blue: #5dbcfc;
-$box-shadow: #2321214a;
-$error: #f44336;
-$icon-hover: #5dbcfc;
+:root {
+  --prmary: #000000;
+  --secondary: #18181b;
+  --color-border: #3f3f4666;
+  --border-card: #5dbcfc4d;
+  --linear-gradient-cart: linear-gradient(#0000000d, #ffffff1a);
+  --subtitle: #a1a1aa;
+  --title: #f4f4f5;
+  --bgheader: #27272a;
+  --blue: #5dbcfc;
+  --box-shadow: #2321214a;
+  --error: #f44336;
+  --icon-hover: #5dbcfc;
+  --padding-rems-8-: -4.8rem;
+  --padding-rems-8: 4.8rem;
+  --padding-rems-7-: -1.7rem;
+  --padding-rems-7: 1.7rem;
+  --media1000px: "max-width: 1000px";
+  --media600px: "max-width: 600px";
+  --media800px: "max-width: 800px";
+}
 
-$padding-rems-8-: -4.8rem;
-$padding-rems-8: 4.8rem;
-$padding-rems-7-: -1.7rem;
-$padding-rems-7: 1.7rem;
-
-$media1000px: "max-width: 1000px";
-$media600px: "max-width: 600px";
-$media800px: "max-width: 800px";
+.light {
+  --prmary: #fafafa;
+  --secondary: #ebebeb;
+  --border-card: #cacaca84;
+  --title: #27272a;
+  --subtitle: #52525b;
+  --bgheader: #fdfdfd;
+  --blue: #0095f6;
+  --icon-hover: #333;
+}

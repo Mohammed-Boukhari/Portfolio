@@ -10,12 +10,12 @@ footer.flex {
   ul {
     gap: 1rem;
     a {
-      color: $subtitle;
+      color: var(--subtitle);
       font-size: 0.9rem;
       font-weight: 400;
       transition: all 0.3s;
       &:hover {
-        color: $blue;
+        color: var(--blue);
       }
     }
   }
@@ -24,7 +24,7 @@ footer.flex {
   }
 }
 
-@media ($media800px) {
+@media (--media800px) {
   footer.flex {
     display: flex;
     flex-direction: column !important;

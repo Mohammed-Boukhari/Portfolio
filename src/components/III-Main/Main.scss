@@ -1,4 +1,4 @@
-// FIXME: import { $bgheader, $title, $blue, $subtitle, $error, $secondary, $color-border, $box-shadow } from '../../var.scss';
+// FIXME: import { --bgheader, --title, --blue, --subtitle, --error, --secondary, --color-border, --box-shadow } from '../../var.scss';
 
 @import "../../style/var.scss";
 
@@ -41,7 +41,7 @@ main.flex {
         font-weight: bold;
         letter-spacing: 0.6px;
         padding: 0.8rem 0;
-        border: 1px solid $blue;
+        border: 1px solid var(--blue);
       }
     }
   }
@@ -56,18 +56,18 @@ main.flex {
     row-gap: 2rem;
 
     article.card {
-      border: 1px solid $border-card;
+      border: 1px solid var(--border-card);
       border-radius: 4px;
       transition: all 0.3s;
-      background-image: $linear-gradient-cart;
+      background-image: var(--linear-gradient-cart);
       &:hover {
-        border: 1px solid $blue;
+        border: 1px solid var(--blue);
         transform: rotate(1deg);
         scale: 1.01;
         cursor: pointer;
       }
       .box {
-        color: $title;
+        color: var(--title);
         padding: 5px;
         h1.title {
           margin: 0;
@@ -77,10 +77,10 @@ main.flex {
           div.flex .icon-link,
           div.flex .icon-github {
             font-size: 1.2rem;
-            color: $subtitle;
+            color: var(--subtitle);
             &:hover {
               cursor: pointer;
-              color: $blue;
+              color: var(--blue);
             }
           }
           div.flex .icon-github {
@@ -88,12 +88,12 @@ main.flex {
           }
           a.link {
             font-size: 0.9rem;
-            color: $blue;
+            color: var(--blue);
             margin-right: 12px;
           }
         }
         .sub-title {
-          color: $subtitle;
+          color: var(--subtitle);
           font-size: 0.8rem;
           margin: {
             bottom: 1.1rem;
@@ -110,7 +110,7 @@ main.flex {
 
 /* FIXME: 3. MAX-WIDTH > 600px */
 
-@media (#{$media600px}) {
+@media (#{--media600px}) {
   main.flex {
     gap: 2.64rem;
     flex-direction: column;

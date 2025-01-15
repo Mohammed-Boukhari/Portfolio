@@ -11,9 +11,9 @@
 section.contact-us {
   h1.titel {
     font-size: 2.1rem;
-    color: $title;
+    color: var(--title);
     span.icon-envelope {
-      color: $subtitle;
+      color: var(--subtitle);
       margin-right: 1rem;
       font-size: 1.8rem;
     }
@@ -67,18 +67,18 @@ section.contact-us {
   }
 
   label {
-    color: $subtitle;
+    color: var(--subtitle);
   }
 
   .sub-titel {
-    color: $subtitle;
+    color: var(--subtitle);
     margin-bottom: 2rem;
     line-height: 1.65rem;
   }
 }
 
 /* FIXME:  MAX-WIDTH > 500px */
-@media (#{$media600px}) {
+@media (max-width: 600px) {
   section.contact-us {
     div.flex {
       form {
@@ -101,9 +101,18 @@ section.contact-us {
         align-self: center;
       }
     }
+  }
+}
 
-    div.animation {
-      display: none;
-    }
+body.light {
+  color: #1b1b1b;
+  button.submit {
+    color: #b1b1b1;
+  }
+}
+
+@media (max-width: 1000px) {
+  div.animation {
+    display: none;
   }
 }

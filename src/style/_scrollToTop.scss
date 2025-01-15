@@ -27,7 +27,7 @@
   }
 }
 
-@media (#{$media600px}) {
+@media (#{--media600px}) {
   .scrollToTop {
     opacity: 0.4;
     width: 2.3rem;

@@ -1,4 +1,4 @@
-// FIXME: import { $bgheader, $title, $blue, $subtitle, $error, $secondary, $color-border, $box-shadow } from '../../var.scss';
+// FIXME: import { --bgheader, --title, --blue, --subtitle, --error, --secondary, --color-border, --box-shadow } from '../../var.scss';
 @import "../../style/var.scss";
 
 /* ------------------------------------------
@@ -26,20 +26,20 @@ header.flex {
   }
 
   nav {
-    background-color: $bgheader;
+    background-color: var(--bgheader);
     padding: 0.2rem 2.3rem 0.2rem 0rem;
     border-radius: 55px;
-    box-shadow: 2px 2px 10px $box-shadow;
+    box-shadow: 2px 2px 10px var(--box-shadow);
 
     ul.flex {
       gap: 16px;
       a {
-        color: $title;
+        color: var(--title);
         opacity: 0.9;
         transition: all 0.1s;
         &:hover {
           opacity: 1;
-          color: $blue;
+          color: var(--blue);
         }
       }
     }
@@ -54,26 +54,29 @@ header .icon-cancel {
   font-size: 1.3rem;
   cursor: pointer;
 }
+header .icon-sun {
+  color: rgb(255 165 0);
+}
 
 header button.icon-cancel {
   font-size: 1.5rem !important ;
   transition: all 0.2s;
 
   &:hover {
-    color: $error;
+    color: var(--error);
     rotate: 90deg;
   }
 }
 
 header .icon-menu,
 button.mode {
-  background-color: $bgheader;
+  background-color: var(--bgheader);
   height: 2.4rem;
   width: 2.4rem;
   border-radius: 50%;
   opacity: 0.9;
 
-  color: $subtitle;
+  color: var(--subtitle);
   border: 1px solid #f4a5603f;
   transition: all 0.2s;
   &:hover {
@@ -111,11 +114,11 @@ button.mode {
       margin-top: 2rem;
       border-radius: 1rem;
       padding: 1rem 2rem;
-      background-color: $secondary;
+      background-color: var(--secondary);
       animation: modal 0.5s;
 
       li {
-        border-bottom: 1px solid $color-border;
+        border-bottom: 1px solid var(--color-border);
         padding-bottom: 0.77rem;
         padding-top: 0.5rem;
         &:last-child {
@@ -133,7 +136,7 @@ button.mode {
           transition: all 0.2s;
           &:hover {
             opacity: 1;
-            color: $blue;
+            color: var(--blue);
           }
         }
       }

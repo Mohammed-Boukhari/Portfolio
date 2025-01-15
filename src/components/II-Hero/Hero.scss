@@ -1,4 +1,4 @@
-// FIXME: import { $bgheader, $title, $blue, $subtitle, $error, $secondary, $color-border, $box-shadow } from '../../var.scss';
+// FIXME: import { --bgheader, --title, --blue, --subtitle, --error, --secondary, --color-border, --box-shadow } from '../../var.scss';
 @import "../../style/var.scss";
 
 /* ------------------------------------------
@@ -22,8 +22,8 @@ section.hero {
 
     .parent-avatar {
       img.avatar {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
         border-radius: 50%;
         box-shadow: 2px 2px 30px gray inset;
         border: 1px solid darkorange;
@@ -32,7 +32,7 @@ section.hero {
       }
 
       .icon-verified {
-        color: $blue;
+        color: var(--blue);
         font-size: 1.3rem;
         margin-bottom: 0.3rem;
       }
@@ -41,11 +41,11 @@ section.hero {
       font-size: 2.85rem;
       line-height: 3.3rem;
       margin: 24px 0;
-      color: $title;
+      color: var(--title);
     }
 
     p.sub-title {
-      color: $subtitle;
+      color: var(--subtitle);
       font-size: 0.9rem;
       line-height: 1.65rem;
       margin-bottom: 32px;
@@ -55,9 +55,9 @@ section.hero {
       justify-content: flex-start !important;
       font-size: 1.3rem;
       gap: 1.5rem;
-      color: $subtitle;
+      color: var(--subtitle);
       .icon:hover {
-        color: $icon-hover;
+        color: var(--icon-hover);
         cursor: pointer;
       }
     }
@@ -67,3 +67,8 @@ section.hero {
 /* ------------------------------------------
   FIXME: -2 right-section => animation
 -------------------------------------------*/
+
+div.right-section.animation{
+  // width: 100%;
+  translate: 50px 30px;
+}

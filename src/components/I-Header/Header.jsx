@@ -1,7 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Header.scss";
 
 const Header = () => {
+  const [theme, setTheme] = useState(localStorage.getItem("myTheme") ?? "dark");
+
+  useEffect(() => {
+    if (theme === "light") {
+      document.body.classList.remove("dark");
+      document.body.classList.add("light");
+    } else {
+      document.body.classList.remove("light");
+      document.body.classList.add("dark");
+    }
+  }, [theme]);
+
   const [showHaburgerMenu, setshowHaburgerMenu] = useState(false);
 
   const closeMenu = () => {
@@ -37,8 +49,21 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <button className="mode flex">
-          <span className="icon-moon-o"></span>
+        <button
+          onClick={() => {
+            window.localStorage.setItem(
+              "myTheme",
+              theme === "dark" ? "light" : "dark"
+            );
+            setTheme(window.localStorage.getItem("myTheme"));
+          }}
+          className="mode flex"
+        >
+          {theme === "light" ? (
+            <span className="icon-sun"></span>
+          ) : (
+            <span className="icon-moon-o"></span>
+          )}
         </button>
 
         {showHaburgerMenu && (
@@ -59,7 +84,7 @@ const Header = () => {
               </li>
               <li>
                 <a href="" onClick={closeMenu}>
-                  Profects
+                  Prefects
                 </a>
               </li>
               <li>

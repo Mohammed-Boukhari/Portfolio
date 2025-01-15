@@ -10,7 +10,7 @@ html {
   body {
     font-family: "Roboto", serif, sans-serif;
     letter-spacing: 0.1px;
-    background: $prmary;
+    background: var(--prmary);
     color: #fff;
     margin: 0;
     padding: 0;
@@ -25,38 +25,38 @@ html {
 .container {
   // width: 80%;
   margin: 0 auto;
-  background-color: $secondary;
-  border: 2px solid $color-border;
-  padding: 0 $padding-rems-8;
+  background-color: var(--secondary);
+  border: 2px solid var(--color-border);
+  padding: 0 var(--padding-rems-8);
 
   .divider {
-    border-bottom: 1px solid $color-border;
+    border-bottom: 1px solid var(--color-border);
     margin: 3rem 0;
 
-    width: calc(100% + $padding-rems-8 + $padding-rems-8);
-    margin-left: $padding-rems-8-;
-    margin-right: $padding-rems-8-;
+    width: calc(100% + var(--padding-rems-8) + var(--padding-rems-8));
+    margin-left: var(--padding-rems-8-);
+    margin-right: var(--padding-rems-8-);
   }
 }
 
 /* FIXME: MAX-WIDTH > 1000px */
 
-@media (#{$media1000px}) {
+@media (#{--media1000px}) {
   .container {
     // width: 90%;
-    // padding: 0 $padding-rems-7;
+    padding: 0 var(--padding-rems-7);
 
     .divider {
-      width: calc(100% + #{$padding-rems-7} + 0.8rem);
-      margin-left: $padding-rems-7-;
-      margin-right: $padding-rems-7-;
+      width: calc(100% + #{--padding-rems-7} + 0.8rem);
+      margin-left: var(--padding-rems-7-);
+      margin-right: var(--padding-rems-7-);
     }
   }
 }
 
 /* FIXME: MAX-WIDTH > 600px */
 
-// @media (#{$media600px}) {
+// @media (#{--media600px}) {
 //   .container {
 //     width: 98%;
 //     padding: 0 1.5rem;
