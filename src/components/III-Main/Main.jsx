@@ -14,6 +14,7 @@ const Main = () => {
     <main className="flex">
       <section className="flex left-section ">
         <button
+          // FIXME: change arr to all
           onClick={() => {
             setAddClassActive("all");
             setArr(myProjects);
@@ -23,6 +24,7 @@ const Main = () => {
           all projects
         </button>
         <button
+          // FIXME: change arr to CSS HTML
           onClick={() => {
             setAddClassActive("css&html");
 
@@ -36,6 +38,7 @@ const Main = () => {
           HTML & CSS
         </button>
         <button
+          // FIXME: change arr to javascript
           onClick={() => {
             setAddClassActive("javascript");
             const newArr = myProjects.filter((item) => {
@@ -48,6 +51,7 @@ const Main = () => {
           JavaScript
         </button>
         <button
+          // FIXME: change arr to reactJs MUI
           onClick={() => {
             setAddClassActive("reactJs&mui");
 
@@ -61,6 +65,7 @@ const Main = () => {
           React JS & MUI
         </button>
         <button
+          // FIXME: change arr to node Express
           onClick={() => {
             setAddClassActive("node&Express");
 
@@ -74,10 +79,13 @@ const Main = () => {
           Node & Express
         </button>
       </section>
+
+      {/* FIXME: animation https://motion.dev/  */}
+      {/* animation  */}
       <AnimatePresence>
         <section className="right-section flex">
+          {/* FIXME: loop for arr */}
           {arr.map((item, index) => {
-            // console.log(item);
             return (
               <motion.article
                 key={index}
@@ -87,7 +95,11 @@ const Main = () => {
                 animate={{ transform: "scale(1)" }}
                 transition={{ type: "spring", damping: "8" }}
               >
-                <img width={widthToCard} src={item.imgPath} alt="" />
+                <img
+                  width={widthToCard}
+                  src={item.imgPath}
+                  alt={item.imgPath}
+                />
                 <div style={{ width: `${widthToCard}px` }} className="box">
                   <h1 className="title">{item.projectTitle}</h1>
                   <p className="sub-title ">
@@ -114,6 +126,7 @@ const Main = () => {
           })}
         </section>
       </AnimatePresence>
+      {/*== animation ==*/}
     </main>
   );
 };

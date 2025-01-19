@@ -9,6 +9,7 @@ const supTitle = `I'm Mohammed a software designer and en trepreneur. based in N
 
 const Hero = () => {
   const lottieRef = useRef();
+
   return (
     <section className="hero flex">
       <div className="left-section ">
@@ -18,7 +19,7 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 4 }}
             className="avatar"
-            src="../../../src/imgs/1000015103-02.jpeg"
+            src="https://res.cloudinary.com/doofmolcc/image/upload/v1737301466/1000015103-02_ozk9u3.jpg"
             alt="img mohamed"
           />
           <motion.span

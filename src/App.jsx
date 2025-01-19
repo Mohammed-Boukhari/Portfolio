@@ -4,11 +4,13 @@ import Main from "./components/III-Main/Main";
 import Contact from "./components/IV-Contact/Contact";
 import Footer from "./components/V-Footer/Footer";
 
-import "./App.scss";
 import { useEffect, useState } from "react";
+
+import "./App.scss";
 
 function App() {
   const [showScrollBTN, setShowScrollBTN] = useState(false);
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       // console.log(window.scrollY);

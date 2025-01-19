@@ -10,6 +10,10 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+.firebase
+firebase.json
+.firebaserc
+
 *.local
 
 # Editor directories and files

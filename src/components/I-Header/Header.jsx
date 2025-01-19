@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
+
 import "./Header.scss";
+//
+const Header /* TODO: component with Header logic || UI */ = () => {
+  // FIXME: change themes || dark modo && light modo
+  const [theme, setTheme] = useState(localStorage.getItem("myTheme") ?? "dark"); // ?? dark default theme
+  const [showHaburgerMenu, setshowHaburgerMenu] = useState(false);
 
-const Header = () => {
-  const [theme, setTheme] = useState(localStorage.getItem("myTheme") ?? "dark");
-
+  // FIXME: add theme to body
   useEffect(() => {
     if (theme === "light") {
       document.body.classList.remove("dark");
@@ -14,11 +18,10 @@ const Header = () => {
     }
   }, [theme]);
 
-  const [showHaburgerMenu, setshowHaburgerMenu] = useState(false);
+  const /* FIXME: () => close Menu */ closeMenu = () => {
+      setshowHaburgerMenu(false);
+    };
 
-  const closeMenu = () => {
-    setshowHaburgerMenu(false);
-  };
   return (
     <>
       <header className="flex">
@@ -59,14 +62,14 @@ const Header = () => {
           }}
           className="mode flex"
         >
-          {theme === "light" ? (
+          {theme === "light" /* FIXME: if change icon theme */ ? (
             <span className="icon-sun"></span>
           ) : (
             <span className="icon-moon-o"></span>
           )}
         </button>
 
-        {showHaburgerMenu && (
+        {showHaburgerMenu /* FIXME: if condition show Haburger Menu */ && (
           <div className="fixed ">
             <ul className="modal">
               <li className="border close ">
